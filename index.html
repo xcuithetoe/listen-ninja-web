@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Analysis Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<header>
+    <h1>ListenNinja Free Self-Guided Version</h1>
+</header>
+
+<body>
+    <div class="split-screen">
+        <!-- Left content -->
+        <div class="split-screen__half" id="transcriptHalf">
+            <div class="wrap" id="transcriptN">
+
+                <audio id="audio" class="with-transcript" controls preload="auto">
+                    <source src="14-cultura-espanola-espanglish_mf_17127580_feed_1.wav" type="audio/mpeg">Your browser does not support the audio element.</source>
+                </audio>
+                
+                <div class="floating-label" status="None" >
+                    <!-- The input -->
+                    <input placeholder="Type what you hear" id="myInput" class="floating-label__input"onclick="changeStatus('Active', 'Green', 'mintcream')"  onblur="changeStatus('Inactive', 'Red', 'Pink')"/>
+                
+                    <!-- The label 
+                    <label class="floating-label__label">Type what you hear</label>-->
+                </div>
+                <ul id="transcript">
+
+                </ul>                
+
+
+                
+            </div>
+        </div>
+    
+        <!-- Right content -->
+        <div class="split-screen__half" id="inputhalf">
+            <div class="btn-container">
+                <button class="btn" id="alarmbtn">Alarm</button>
+                <button class="btn">Productivity</button>
+                <button class="btn">Notes</button>
+                <button class="btn" id="settingsbtn">Settings</button>
+            </div>
+            <div id="faq">
+                <h2>Shortcut keys</h2>
+                <div class="question" id="controlD">
+                    <h3>Control+D</h3>
+                    <p>Stop audio and Begin Repeating of Audio Clip. Audio will indefinitely repeat.</p>
+                </div>
+                <div class="question" id="controlF">
+                    <h3>Control+F</h3>
+                    <p>Stop Repeat and Continue Playing the Next Audio. Audio will continue until you press Control+D and begin a repeat of the new audio clip</p>
+                </div>
+                <div class="question" id="controlS">
+                    <h3>Control+S</h3>
+                    <p>Go back to the last Audio Clip</p>
+                </div>
+
+
+            </div>
+            <div>
+                <p id="groundNode"></p>
+                <p id="nodes"></p>
+            </div>
+            <!--
+                <label class="tutorial" id="tutorialparagraph">
+                    <p><strong>Control+D</strong>: Stop audio and Begin Repeating of Audio Clip</p>
+                    <ul>
+                        <li>Audio will indefinitely repeat.&nbsp;</li>
+                    </ul>
+                    <p><strong>Control+F</strong>: Stop Repeat and Continue Playing the Next Audio</p>
+                    <ul>
+                        <li>Audio will continue until you press Control+D and begin a repeat of the new audio clip</li>
+                    </ul>
+                    <p><strong>Control+S</strong>: Go back to the last Audio Clip</p>
+                    <ul>
+                        <li>Click Control+F to get back to the next audio clip</li>
+                    </ul>
+                </label>                
+            -->
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src=textInput.js></script>
+<script src=soundcontrol.js></script>
+<script src=inputStatusControl.js></script>
+</html>
